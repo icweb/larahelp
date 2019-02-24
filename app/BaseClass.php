@@ -17,7 +17,7 @@ class BaseClass extends Model
             Schema::hasColumn($record->getTable(), 'author_id')
             )
             {
-                $record->author_id = auth()->check();
+                $record->author_id = auth()->id();
             }
 
         });
